@@ -211,12 +211,6 @@ body.demo::before {
     }
 }
 
-.container {
-    background : pink;
-    padding : 0 1em;
-    margin : 0 auto;
-    }
-
 
 /* ------------------------------ */
 /* ------------------------------ */
@@ -233,4 +227,43 @@ body.demo::before {
 
 .demo .column p {
     max-width: none;
+}
+
+
+
+/* ---------- */
+
+
+/* GIRD SYSTEM */
+
+.column {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+@media (min-width: 768px) {
+    .row {
+        display: flex;
+    }
+    .column {
+        flex-grow: 0;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .one-whole { width: 100%; }
+    .one-half { width: 48%; }
+    .one-third { width: 31.3333%; }
+    .two-thirds { width: 64.3333%; }
+    .one-fourth { width: 23%; }
+    .push-one-fourth { margin-left: 26%; }
+    .push-one-third { margin-left: 34.3333%;}
+
+    .row.centered {
+        justify-content: center;
+    }
+    .column.centered {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

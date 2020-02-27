@@ -211,11 +211,42 @@ body.demo::before {
     }
 }
 
-.container {
-    background : pink;
-    padding : 0 1em;
-    margin : 0 auto;
+
+/* GRID SYSTEM */
+
+.column {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+@media (min-width: 768px) {
+    .row {
+        display: flex;
     }
+    .column {
+        flex-grow: 0;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .one-whole { width: 100%; }
+    .one-half { width: 48%; }
+    .one-third { width: 31.3333%; }
+    .two-thirds { width: 64.3333%; }
+    .one-fourth { width: 23%; }
+    .push-one-fourth { margin-left: 26%; }
+    .push-one-third { margin-left: 34.3333%;}
+
+    .row.centered {
+        justify-content: center;
+    }
+    .column.centered {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
 
 
 /* ------------------------------ */
@@ -233,4 +264,78 @@ body.demo::before {
 
 .demo .column p {
     max-width: none;
+}
+
+
+/* FOR DEV TESTING ONLY */
+
+/* * {
+    background-color: yellow;
+    color: black;
+    box-shadow: 0 0 0 3px inset blue;
+
+}
+
+.site-header { background-color: violet;
+    box-shadow: 0 0 0 3px inset cornflowerblue;}
+.site-main { background-color: green;
+    box-shadow: 0 0 0 3px inset mediumaquamarine}
+.site-footer { background-color: orange;
+    box-shadow: 0 0 0 3px inset tomato;} */
+
+
+/* SITE STRUCTURE
+
+
+/* SITE HEADER */
+
+@media (min-width: 768px) {
+
+
+.site-header .container {
+    background: yellow;
+    display:flex;
+    justify-content: space-between;
+}
+}
+
+.site-header {
+    color: black;
+    padding: .5em;
+}
+
+
+.site-header a {
+    color: rgb(214, 0, 0);
+    text-decoration: none;
+}
+
+
+/* SITE ID */
+
+.site-id h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.site-id a {
+    display: block;
+    padding: .5em 0;
+}
+
+.site-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.site-nav li {
+    list-style: none;
+}
+
+.site-nav a {
+    display: block;
+    padding: 1em;
+   
 }
