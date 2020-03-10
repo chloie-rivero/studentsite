@@ -266,24 +266,54 @@ body {
 }
 
 
+/* NAVICON */
+
+.navicon {
+    color: rgba(0,0,0,0);
+    padding: 0;
+    
+}
+
+.navicon::after {
+    content: "\2630";
+    color: black;
+    display: inline-block;
+    font-size: 1.5em;
+
+}
+
+.navicon::selection {
+    color: none;
+    background: none;
+}
+
+.expanded .navicon::after {
+    content: "\2715"
+}
+
+
 /* TOGGLE-NAV */
 
 @media (max-width: 767px) {
 
-    .toggle-nav .container {
-        display: flex;
-        justify-content: space-between;
+    .toggle-nav .site-id h1 {
+        text-align: left;
     }
+    
 
     .toggle-nav .menu-button {
-        position: static;
+        position: absolute;
         left: auto;
+        top: 1.25em;
+        right: 1em;
+
     }
 
     .toggle-nav .site-nav {
-        text-align: right;
+        text-align: center;
     }
 
+    
     .toggle-nav .site-nav ul {
         position: absolute;
         left: -9999px;
@@ -293,6 +323,20 @@ body {
         position: static;
         left: auto;
         display: block;
+        margin-top: 1em;
+        
+    }
+
+    .toggle-nav.expanded .site-nav a {
+        background: rgba(0, 0, 102, 1);
+        color: white;
+        margin: .5em 0;
+        padding: 1em;
+    }
+
+    .toggle-nav .site-nav a:hover{
+        background: rgba(0, 0, 51, 1);
+
     }
 }
 
