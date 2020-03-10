@@ -255,7 +255,49 @@ body {
     padding: .5em 1em;
 }
 
-/* SITE MAIN (Main Content Area) */
+/* MENU BUTTON */
+.menu-button {
+    position: absolute;
+    left: -9999px;
+    padding: .5em 1em;
+}
+.menu-button:hover {
+    cursor: pointer;
+}
+
+
+/* TOGGLE-NAV */
+
+@media (max-width: 767px) {
+
+    .toggle-nav .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .toggle-nav .menu-button {
+        position: static;
+        left: auto;
+    }
+
+    .toggle-nav .site-nav {
+        text-align: right;
+    }
+
+    .toggle-nav .site-nav ul {
+        position: absolute;
+        left: -9999px;
+    }
+
+    .toggle-nav.expanded .site-nav ul {
+        position: static;
+        left: auto;
+        display: block;
+    }
+}
+
+
+/* SITE MAIN (Main Content) */
 .site-main {
 
 }
@@ -281,12 +323,6 @@ section {
     margin-right: auto;
 }
 
-
-
-
-
-/* ------------------------ */
-/* ------------------------ */
 /* ------------------------ */
 
 
@@ -337,22 +373,4 @@ body.demo::before {
     }
 }
 
-/* FOR DEV TESTING ONLY */
-
-/* * {
-    background-color: rgba(255,0,0,.2);
-    color: rgba(255,0,0,.3);
-    box-shadow: 0 0 0 3px inset rgba(255,0,0,1);
-}
-.site-header { 
-    background-color: rgba(0,255,0,.4);
-    box-shadow: 0 0 0 3px inset rgba(0,255,0,1);
-}
-.site-main { 
-    background-color: rgba(0,0,255,.4);
-    box-shadow: 0 0 0 3px inset rgba(0,0,255,1);
-}
-.site-footer { 
-    background-color: rgba(255, 255, 0, 0.4);
-    box-shadow: 0 0 0 3px inset rgba(255,255,0,1);
-} */
+/* ------------ */
