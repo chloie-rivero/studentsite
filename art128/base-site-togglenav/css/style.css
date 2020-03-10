@@ -279,16 +279,22 @@ body {
     color: black;
     display: inline-block;
     font-size: 1.5em;
+    transform: rotate(0deg);
 
 }
 
 .navicon::selection {
     color: none;
     background: none;
+   
+
 }
 
 .expanded .navicon::after {
-    content: "\2715"
+    content: "\2715";
+    transform: rotate(90deg);
+    transition: .4s ease-out;
+
 }
 
 
