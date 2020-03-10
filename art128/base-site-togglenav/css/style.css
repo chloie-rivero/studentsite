@@ -233,7 +233,7 @@ body {
 }
 
 .site-id a {
-    display: block;
+    display: inline-block;
     padding: .25em 0;
 }
 
@@ -344,7 +344,7 @@ body {
 /* SITE MAIN (Main Content) */
 .site-main {
 
-}
+}†
 
 /* SECTIONS */
 section {
