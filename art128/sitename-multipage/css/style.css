@@ -7,6 +7,7 @@ CSS TABLE OF CONTENTS
         # BODY
         # HEADINGS
         # PARAGRAPHS
+        # TYPE SPECIMEN
         # LINKS
         # LISTS
         # BLOCK QUOTES
@@ -80,6 +81,23 @@ p {
     max-width: 35em;
 }
 
+/* TYPE SPECIMEN */
+.headline {
+    font-size: 4em;
+    font-weight: bold;
+   
+}
+.subheadline {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: normal;
+    color: rgba(0,0,0,.7);
+}
+.date {
+    font-style: italic;
+    color: rgba(0,0,0,.5);
+}
+
 /* LINKS */
 a {
     color: rgba(0, 51, 102, 1);
@@ -90,6 +108,21 @@ a:hover {
     text-decoration: underline;
 }
 
+/* BLOCKQUOTES */
+blockquote{
+    font-size: 1.5em;
+    line-height: 1.2em;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+/* HELPERS */
+@media(min-width:768px){
+    .hideonlarge {
+        visibility: hidden;
+    }
+}
+
 /* MEDIA */
 img {
     max-width: 100%;
@@ -98,7 +131,8 @@ img {
 
 /* BUTTONS */
 .button,
-button {
+button,
+input[type="submit"] {
     font-size: 1em;
     display: inline-block;
     background-color: rgba(0, 51, 102, 1);
@@ -111,7 +145,8 @@ button {
     text-align: center;
 }
 .button:hover,
-button:hover {
+button:hover,
+input[type="submit"]:hover {
     color: rgba(255,255,255,1);
     background-color: rgba(0, 0, 51, 1);
     text-decoration: none;
@@ -230,11 +265,14 @@ body {
     font-size: 1.5em;
     margin: 0;
     text-align: center;
+    color: rgba(0,0,0,.5);
+    font-weight: normal;
 }
 
 .site-id a {
     display: inline-block;
     padding: .25em 0;
+    font-weight: bold;
 }
 
 /* SITE NAV (Primary Top Nav) */
@@ -259,42 +297,14 @@ body {
 .menu-button {
     position: absolute;
     left: -9999px;
-    padding: .5em 1em;
+    padding: .5em;
 }
 .menu-button:hover {
     cursor: pointer;
 }
-
-
-/* NAVICON */
-
-.navicon {
-    color: rgba(0,0,0,0);
-    padding: 0;
-    
-}
-
-.navicon::after {
-    content: "\2630";
-    color: black;
-    display: inline-block;
-    font-size: 1.5em;
-    transform: rotate(0deg);
-
-}
-
-.navicon::selection {
+.menu-button::selection {
     color: none;
     background: none;
-   
-
-}
-
-.expanded .navicon::after {
-    content: "\2715";
-    transform: rotate(90deg);
-    transition: .4s ease-out;
-
 }
 
 
@@ -305,50 +315,96 @@ body {
     .toggle-nav .site-id h1 {
         text-align: left;
     }
-    
 
     .toggle-nav .menu-button {
         position: absolute;
         left: auto;
-        top: 1.25em;
-        right: 1em;
-
+        top: 1em;
+        right: 1.5em;
     }
 
     .toggle-nav .site-nav {
         text-align: center;
     }
 
-    
+    /* HIDE NAV ON SMALL SCREENS BY DEFAULT */
     .toggle-nav .site-nav ul {
         position: absolute;
         left: -9999px;
+        margin-top: 1em;
     }
 
+    /* SHOW NAV ON SMALL SCREENS WHEN EXPANDED CLASS IS TOGGLED */
     .toggle-nav.expanded .site-nav ul {
         position: static;
         left: auto;
         display: block;
-        margin-top: 1em;
-        
     }
-
     .toggle-nav.expanded .site-nav a {
-        background: rgba(0, 0, 102, 1);
-        color: white;
+        background: rgba(0, 51, 102, 1);
+        color: rgba(255, 255, 255, 1);
         margin: .5em 0;
         padding: 1em;
     }
 
-    .toggle-nav .site-nav a:hover{
+    .toggle-nav.expanded .site-nav a:hover {
         background: rgba(0, 0, 51, 1);
-
     }
+
+    /* ANIMATING THE TOGGLE NAV */
+    .toggle-nav .site-nav ul {
+        transition: all 1s ease;
+        max-height: 0;
+    }
+
+    .toggle-nav.expanded .site-nav ul  {
+        max-height: 400px;
+    }
+
 }
 
+/* NAVICON */
+
+.navicon {
+    color: rgba(0,0,0,0);
+    padding: 0;
+}
+.navicon::after {
+    content: "\2630";
+    color: rgba(0,0,0,1);
+    display: inline-block;
+    font-size: 1.5em;
+    transform: rotate(0deg);
+}
+
+.expanded .navicon::after {
+    content: "\2715";
+    transform: rotate(-90deg);
+    transition: transform .4s ease-out;
+}
+
+
+
+/* SITE MAIN (Main Content Area) */
+
+
 /* SECTIONS */
-.section {
+section {
     padding: 4em 0;
+}
+
+.sectionhead {
+    padding-top: 2em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+  
+.sectionhead:after {
+    content: "";
+    display: block;
+    width: 50px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    margin: 0.5em auto;
 }
 
 .hero {
@@ -367,6 +423,63 @@ body {
     margin-right: auto;
 }
 
+
+/* ARTICLE */
+
+article {
+    padding: 4em 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+article .date + p::first-letter {
+    /* color: red; */
+    font-size: 5.6em;
+    line-height: 1;
+    font-weight: bold;
+    float: left;
+    margin: 0 .1em 0 0;
+    padding: 0;
+    display: block;
+}
+article .date + p::first-line {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* ADDRESS */
+address {
+    margin: 1em 0;
+}
+
+/* FORMS */
+form {
+    padding: 0;
+}
+
+label, input[type="text"], textarea {
+    width: 100%;
+    display: block;
+}
+
+label {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+input, textarea {
+    background-color: rgba(0,0,0,.1);
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 1em;
+}
+
+input[type="submit"] {
+    margin-top: 1.5em;
+}
+
+
+/* ------------------------ */
+/* ------------------------ */
 /* ------------------------ */
 
 
@@ -417,4 +530,22 @@ body.demo::before {
     }
 }
 
-/* ------------ */
+/* FOR DEV TESTING ONLY */
+
+/* * {
+    background-color: rgba(255,0,0,.2);
+    color: rgba(255,0,0,.3);
+    box-shadow: 0 0 0 3px inset rgba(255,0,0,1);
+}
+.site-header { 
+    background-color: rgba(0,255,0,.4);
+    box-shadow: 0 0 0 3px inset rgba(0,255,0,1);
+}
+.site-main { 
+    background-color: rgba(0,0,255,.4);
+    box-shadow: 0 0 0 3px inset rgba(0,0,255,1);
+}
+.site-footer { 
+    background-color: rgba(255, 255, 0, 0.4);
+    box-shadow: 0 0 0 3px inset rgba(255,255,0,1);
+} */
