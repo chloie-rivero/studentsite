@@ -422,6 +422,9 @@ section:last-child {
     text-align: center;
     background-color: rgba(204,204,204,1);
     padding: 6em 1em;
+    background-image: url('../img/bg-1.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .hero h2 {
