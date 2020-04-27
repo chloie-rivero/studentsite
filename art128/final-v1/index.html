@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="ut-8" />
-    <title>Site Name | Single-page Site</title>
+    <title>Follybooth</title>
     <meta name="description" content="This is a Starter HTML, CSS, and JS Boilerplate/Framework." />
 
     <!-- FOR SMALL SCREENS -->
@@ -23,14 +23,17 @@
     <header class="site-header toggle-nav sticky">
         <div class="container">
             <div class="site-id">
-                <h1><a class="scroll" href="#home">Site Name</a> / A Single-page Site</h1>
+                <h1><a class="scroll" href="#home">Follybooth</a></h1>
             </div>
             <nav class="site-nav">
                 <div class="menu-button navicon">Menu</div>
                 <ul>
-                    <li><a class="scroll" href="#home">Home</a></li>
                     <li><a class="scroll" href="#about">About</a></li>
-                    <li><a class="scroll" href="#contact">Contact</a></li>
+                    <li><a class="scroll" href="#home">Services</a></li>
+                    <li><a class="scroll" href="#home">Booking</a></li>
+                    <li><a class="scroll" href="#home">Gallery</a></li>
+                    <li><a class="scroll" href="#contact">Connect</a></li>
+                    <li><a class="scroll" href="#contact">BOOK NOW</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,31 +42,108 @@
     <main id="home" class="site-main">
 
         <section class="hero">
-            <h2>Hero Section</h2>
-            <p>This is the top "Hero" sction of a single-page site. Content sections at the top of single-page sites
-                closely resemble the home pages of multi-page sites. </p>
-            <a href="#about" class="scroll button">About Us</a>
-            <a href="#contact" class="scroll button alt"> Contact Us</a>
+            <h2>Capture memories.</h2>
+            <p>There's no better place to let your foolishness shine through!</p>
         </section>
 
         <section id="features">
             <div class="container">
                 <div class="row">
                     <div class="column one-third">
-                        <img src="img/placeholder.gif" alt="Placeholder Image">
-                        <h3>Our History</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio sed labore, maxime voluptas
-                            totam vel!</p>
+                        
+                        <h3>What is Follybooth?</h3>
+                        <p>Where’s your folly?
+
+                            We encourage foolishness at our photo booth. So clown around, act a fool, and most importantly have fun!
+                            
+                            Whether you are hosting a social gathering, wedding, or corporate activation, we have a service that will fit your needs.
+                            
+                            As we put the finishing touches on our packages, feel free to reach out for more information.
+                            Follow us on social as well!</p>
                         <a href="#about" class="scroll button">About Us</a>
                     </div>
                     <div class="column one-third">
-                        <img src="img/placeholder.gif" alt="Placeholder Image">
-                        <h3>Contact Info</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, mollitia.</p>
+                     
+                        <h1>What we do</h1>
+                        <h3>Print Package</h3>
+                           <h3>$295 USD</h3> 
+                           <li>Unlimited Prints</li>
+                           <li>Custom Template</li>
+                            <li>Standard Backdrop</li>
+                                <li>Post with a unique hashtag on Instagram or Twitter</li>
+                                <h3>Social Booth</h3>
+                                <h3>$295 USD</h3> 
+                                <li>Take photos, boomerangs, and GIFs
+                                </li>
+                                <li> Share via Text, Email, or Airdrop
+                                </li>
+                                 <li> Custom Template</li>
+                                     <li>Standard Backdrop
+                                    </li>
+                                    <h3>Print + Digital Package</h3>
+                                    <h3>$295 USD</h3> 
+                                    <li>Unlimited Prints
+                                    </li>
+                                    <li> Digital Access to Images
+                                    </li>
+                                     <li> Custom Template</li>
+                                         <li>Standard Backdrop
+                                        </li>
+                    <h2>MANAGE BOOKING</h2>
+                    <p>To view your booking details, please enter your Booking ID Number and the surname of the person who submitted the booking form.</p>
+
+                    <label for="booking">Booking ID Number</label>
+                            <input type="number" id="booking" name="booking" />
+                            <label for="name">Last Name</label>
+                            <input type="text" id="yourname" name="yourname" />
+
+                            <h2>NEW BOOKING</h2>
+                    <p>To make a new booking, please fill out the following form.</p>
+                    <label for="name">Name</label>
+                    <input type="text" id="yourname" name="yourname" />
+
+                    <label for="Email">E-mail</label>
+                    <input type="text" id="email" name="email" />
+
+
+                    <label for="Phone">Phone No.</label>
+                            <input type="number" id="Phone" name="Phone" />
+                            <label for="Phone">Type of event:</label>
+                            <div class="custom-select" style="width:200px;">
+                                <select>
+                                  <option value="0">Select event type</option>
+                                  <option value="1">Wedding</option>
+                                  <option value="2">Birthday</option>
+                                  <option value="3">Other</option>
+                                
+                                </select>
+                              </div>
+
+                            <label for="Message">Message:</label>
+                            <textarea name="message" style="width:300px; height:200px;">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, mollitia.
+                                </textarea>
+
+                                <form action="#" class="ws-validate">
+                                    <h2>1 Calendars without visible input</h2>
+                               
+                                   <div class="form-row">
+                                       <input type="date" class="hide-replaced" />
+                                   </div>
+                                   <div class="form-row">
+                                       <input type="submit" />
+                                   </div>
+                               </form>
+                               <hr />
+                               <form action="#" class="ws-validate">
+
+                                
+                            <input type="submit" value="Submit" />
+
                         <a href="#contact" class="scroll button">Get in Touch</a>
                     </div>
                     <div class="column one-third">
-                        <img src="img/placeholder.gif" alt="Placeholder Image">
+                    
                         <h3>Directions</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, mollitia.</p>
                         <a href="#map" class="scroll button">View Map</a>
@@ -77,157 +157,7 @@
             <article>
                 <div class="container">
 
-                    <h1 class="headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-
-                    <h2 class="subheadline">
-                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                        posuere cubilia Curae; Vestibulum ultrices augue vitae purus sodales
-                        eleifend.
-                    </h2>
-
-                    <p class="date">Date MM/DD/YYYY</p>
-
-                    <p>
-                        Sed faucibus egestas ultricies. Vivamus enim auctor hendrerit elit.
-                        Morbi facilisis tempus orci, sed placerat metus auctor non. Etiam
-                        non lacus erat, sit amet porttitor tellus. Curabitur pretium
-                        tincidunt tortor in vulputate. Vestibulum ante ipsum primis in
-                        faucibus orci luctus et ultrices posuere cubilia Curae; Morbi quam
-                        eros, bibendum ut pellentesque id, tristique eget lacus. Ut
-                        fermentum ligula vitae est luctus at iaculis nunc placerat.
-                    </p>
-
-                    <p>
-                        Vestibulum urna erat, viverra in dignissim quis, bibendum lobortis
-                        sapien. Integer porttitor magna ut orci aliquam sed suscipit eros
-                        adipiscing. Pellentesque feugiat mi id eros placerat sit amet
-                        hendrerit tortor ultricies. Praesent pellentesque lorem eget ligula
-                        egestas sit amet elementum lacus dignissim. Duis semper sapien id
-                        massa vehicula quis malesuada est molestie. Vestibulum ac nunc in
-                        metus egestas sodales. In dignissim luctus eros, non facilisis nisi
-                        vulputate vulputate. Cras bibendum venenatis ipsum, sed euismod quam
-                        rhoncus rhoncus. Nullam consectetur augue ac mi convallis nec tempor
-                        odio pellentesque.
-                    </p>
-
-                    <h3>Nam ut metus sit amet odio tincidunt tincidunt vitae a orci.</h3>
-
-                    <p>
-                        Maecenas at urna sapien, in lobortis tellus. Morbi eget felis eget
-                        tellus dapibus pellentesque. Duis dapibus pulvinar ipsum eu dapibus.
-                        Suspendisse potenti. Etiam sollicitudin velit eget nisi vulputate eu
-                        semper quam semper. Sed vitae ipsum quam. Nunc sed purus nisl, sit
-                        amet luctus nisi. Ut enim massa, sagittis et commodo eget.
-                    </p>
-
-                    <blockquote>
-                        Pellentesque rutrum, nunc sit amet adipiscing tempor, erat leo
-                        laoreet est, eu rhoncus risus elit quis lectus. Cras nulla tellus,
-                        sollicitudin quis commodo eget, commodo vel sapien.
-                    </blockquote>
-
-                    <p>
-                        Auctor pretium elit. Nunc enim urna, accumsan sed ullamcorper eu,
-                        scelerisque gravida sapien. Phasellus tincidunt nunc elementum
-                        turpis ornare sit amet congue diam sodales. Sed interdum neque ut
-                        ipsum vestibulum euismod. Nulla nec purus ante. Praesent non diam et
-                        leo volutpat dictum in id erat. Donec elementum, leo ac blandit
-                        ornare, nunc nunc tincidunt mauris, sed ultricies lorem nibh quis
-                        lorem.
-                    </p>
-
-                    <p>
-                        Morbi mauris mauris, aliquam eu sollicitudin id, sollicitudin sed
-                        nisl. Cras et nunc a leo pulvinar tincidunt. Suspendisse dignissim,
-                        sem sit amet consequat varius, eros enim ullamcorper eros, at
-                        tincidunt lacus dolor in turpis. Proin tempus ultricies mauris. Sed
-                        eu tortor nisi. Pellentesque non nisi justo, vel suscipit orci.
-                        Integer dolor metus, scelerisque aliquet sollicitudin sit amet,
-                        posuere at mauris. Nunc sem tellus, consequat at pulvinar quis,
-                        fringilla vel libero. Integer faucibus fermentum eros.
-                    </p>
-
-                    <h5>Proin non ipsum ligula, ornare semper purus.</h5>
-
-                    <p>
-                        Morbi tincidunt ligula sit amet nulla venenatis sit amet tristique
-                        nisl pretium. Nunc facilisis, orci et gravida blandit, lectus augue
-                        viverra augue, non tempus ligula leo nec arcu. Cum sociis natoque
-                        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Nullam eu elit quis sem posuere sagittis. Class aptent taciti
-                        sociosqu ad litora torquent per conubia nostra, per inceptos
-                        himenaeos. Mauris congue dolor a magna accumsan eu pharetra mi
-                        porta. Cras eget interdum velit.
-                    </p>
-
-                    <p>
-                        Aenean id nulla in dui iaculis adipiscing. Quisque commodo odio ut
-                        lacus auctor pellentesque. Pellentesque egestas pellentesque lorem
-                        sed imperdiet. Etiam porta egestas lectus eget interdum.
-                        Pellentesque purus neque, elementum non lobortis quis, vulputate ac
-                        metus. Etiam et purus a justo accumsan consequat eu elementum
-                        ligula. Nullam blandit pretium augue, vitae suscipit mauris lobortis
-                        sed. Nam iaculis sem at elit placerat sollicitudin. Ut quis pulvinar
-                        leo.
-                    </p>
-
-                    <h5>Nam ut metus sit amet odio tincidunt tincidunt vitae a orci.</h5>
-
-                    <p>
-                        Maecenas at urna sapien, in lobortis tellus. Morbi eget felis eget
-                        tellus dapibus pellentesque. Duis dapibus pulvinar ipsum eu dapibus.
-                        Suspendisse potenti. Etiam sollicitudin velit eget nisi vulputate eu
-                        semper quam semper. Sed vitae ipsum quam. Nunc sed purus nisl, sit
-                        amet luctus nisi. Ut enim massa, sagittis et commodo eget.
-                    </p>
-
-                    <p>
-                        Auctor pretium elit. Nunc enim urna, accumsan sed ullamcorper eu,
-                        scelerisque gravida sapien. Phasellus tincidunt nunc elementum
-                        turpis ornare sit amet congue diam sodales. Sed interdum neque ut
-                        ipsum vestibulum euismod. Nulla nec purus ante. Praesent non diam et
-                        leo volutpat dictum in id erat. Donec elementum, leo ac blandit
-                        ornare, nunc nunc tincidunt mauris, sed ultricies lorem nibh quis
-                        lorem.
-                    </p>
-
-                    <p>
-                        Morbi mauris mauris, aliquam eu sollicitudin id, sollicitudin sed
-                        nisl. Cras et nunc a leo pulvinar tincidunt. Suspendisse dignissim,
-                        sem sit amet consequat varius, eros enim ullamcorper eros, at
-                        tincidunt lacus dolor in turpis. Proin tempus ultricies mauris. Sed
-                        eu tortor nisi. Pellentesque non nisi justo, vel suscipit orci.
-                        Integer dolor metus, scelerisque aliquet sollicitudin sit amet,
-                        posuere at mauris. Nunc sem tellus, consequat at pulvinar quis,
-                        fringilla vel libero. Integer faucibus fermentum eros.
-                    </p>
-
-                    <h5>
-                        Aenean tristique odio et dui scelerisque scelerisque porta od.
-                    </h5>
-
-                    <p>
-                        Proin non ipsum ligula, ornare semper purus. Morbi tincidunt ligula
-                        sit amet nulla venenatis sit amet tristique nisl pretium. Nunc
-                        facilisis, orci et gravida blandit, lectus augue viverra augue, non
-                        tempus ligula leo nec arcu. Cum sociis natoque penatibus et magnis
-                        dis parturient montes, nascetur ridiculus mus. Nullam eu elit quis
-                        sem posuere sagittis. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Mauris congue
-                        dolor a magna accumsan eu pharetra mi porta. Cras eget interdum
-                        velit.
-                    </p>
-
-                    <p>
-                        Aenean id nulla in dui iaculis adipiscing. Quisque commodo odio ut
-                        lacus auctor pellentesque. Pellentesque egestas pellentesque lorem
-                        sed imperdiet. Etiam porta egestas lectus eget interdum.
-                        Pellentesque purus neque, elementum non lobortis quis, vulputate ac
-                        metus. Etiam et purus a justo accumsan consequat eu elementum
-                        ligula. Nullam blandit pretium augue, vitae suscipit mauris lobortis
-                        sed. Nam iaculis sem at elit placerat sollicitudin. Ut quis pulvinar
-                        leo.
-                    </p>
+                    
 
                 </div>
             </article>
@@ -238,7 +168,7 @@
 
             <div class="container">
                 <div id="map">
-                    <img src="http://placehold.it/1600x400" alt="Map" />
+                    
                 </div>
 
                 <div class="row">
