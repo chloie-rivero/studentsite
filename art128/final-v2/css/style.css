@@ -141,15 +141,15 @@ img {
 .button,
 button,
 input[type="submit"] {
-    font-size: .75em;
+    font-size: .8em;
     display: inline-block;
-    background-color: rgba(174, 102, 211, 1);
+    background-color: rgba(174, 102, 211, .8);
     color: rgba(255,255,255,1);
     padding: 1em 1.5em;
     border-radius: 2em;
     text-transform: uppercase;
     letter-spacing: .05em;
-    line-height: 0;
+    line-height: 2;
     text-align: center;
 }
 .button:hover,
@@ -162,8 +162,8 @@ input[type="submit"]:hover {
 
 .button.alt {
     background-color: transparent;
-    color: rgba(0, 51, 102, 1);
-    border: 1px solid rgba(174, 102, 211, 1);
+    color: white;
+    border: 1px solid rgba(174, 102, 211, .8);
 }
 
 .button.alt:hover {
@@ -269,15 +269,25 @@ body {
 
 
 /* SITE ID (LOGO) */
+
+.site-id .logo img{
+    max-height: 2.5em;
+    display: block;
+
+}
+
 .site-id h1 {
     font-size: 1.5em;
     margin: 0;
     text-align: center;
     color: rgba(0,0,0,.5);
     font-weight: normal;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 
-.site-id a {
+.site-id h1 a {
     display: inline-block;
     padding: .25em 0;
     font-weight: bold;
@@ -448,6 +458,27 @@ section:last-child {
 /* SUB-SECTIONS */
 .subsection {
     padding: 1em 0 1em 0;
+    
+}
+
+#about {
+    text-align: center;
+    background-image: url(../img/bg-2.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 6em 1em;
+    color: white;
+
+}
+
+#services {
+    text-align: center;
+    background-image: url(../img/bg-3.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 6em 1em;
+    color: white;
+
 }
 
 .sectionhead {
@@ -463,6 +494,10 @@ section:last-child {
     border-bottom: .15em solid rgba(0, 0, 0, 0.1);
     margin: 0.5em auto;
 }
+
+
+}
+
 
 /* ARTICLE */
 
